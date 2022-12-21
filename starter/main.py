@@ -9,7 +9,9 @@ from pydantic import BaseModel, Field
 import os
 import sys
 
-sys.path.insert(0, "nd0821-c3-starter-code/starter")
+file_dir = os.path.dirname(os.path.abspath("__file__"))
+sys.path.insert(0, file_dir)
+#sys.path.insert(0, "nd0821-c3-starter-code/starter")
 
 from starter.ml.data import process_data
 from starter.ml.model import inference
@@ -42,9 +44,9 @@ class dataInput(BaseModel):
 # Instantiate the app.
 app = FastAPI()
 
-model = joblib.load(os.path.join('model/', 'model.pkl'))
-encoder = joblib.load( os.path.join('model/', 'encoder.pkl'))
-lb = joblib.load(os.path.join('model/', 'lb.pkl'))
+model = joblib.load(os.path.join(file_dir, 'model/', 'model.pkl'))
+encoder = joblib.load( os.path.join(file_dir, 'model/', 'encoder.pkl'))
+lb = joblib.load(os.path.join(file_dir, 'model/', 'lb.pkl'))
 
 # Define a GET on the specified endpoint.
 @app.get("/")
