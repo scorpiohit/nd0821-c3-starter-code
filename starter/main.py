@@ -2,15 +2,14 @@
 from fastapi import FastAPI
 from typing import Union
 import joblib
+import pandas as pd
 
 # BaseModel from Pydantic is used to define data objects.
 from pydantic import BaseModel, Field
 import os
 import sys
 
-#file_dir = os.path.dirname(os.path.abspath("__file__"))
-#print(file_dir)
-sys.path.insert(0, 'starter/starter') #file_dir)
+sys.path.insert(0, 'starter/starter')
 
 from starter.ml.data import process_data
 from starter.ml.model import inference
