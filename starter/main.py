@@ -11,7 +11,7 @@ import sys
 
 file_dir = os.path.dirname(os.path.abspath("__file__"))
 sys.path.insert(0, file_dir)
-#sys.path.insert(0, "nd0821-c3-starter-code/starter")
+#sys.path.insert(0, "starter/starter")
 
 from starter.ml.data import process_data
 from starter.ml.model import inference
@@ -44,9 +44,9 @@ class dataInput(BaseModel):
 # Instantiate the app.
 app = FastAPI()
 
-model = joblib.load(os.path.join(file_dir, 'model/', 'model.pkl'))
-encoder = joblib.load( os.path.join(file_dir, 'model/', 'encoder.pkl'))
-lb = joblib.load(os.path.join(file_dir, 'model/', 'lb.pkl'))
+model = joblib.load(os.path.join(file_dir, 'starter/model/', 'model.pkl'))
+encoder = joblib.load( os.path.join(file_dir, 'starter/model/', 'encoder.pkl'))
+lb = joblib.load(os.path.join(file_dir, 'starter/model/', 'lb.pkl'))
 
 # Define a GET on the specified endpoint.
 @app.get("/")
