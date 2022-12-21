@@ -9,7 +9,7 @@ from pydantic import BaseModel, Field
 import os
 import sys
 
-sys.path.insert(0, 'starter/starter')
+sys.path.insert(0, "nd0821-c3-starter-code/starter")
 
 from starter.ml.data import process_data
 from starter.ml.model import inference
