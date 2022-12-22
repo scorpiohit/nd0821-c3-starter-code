@@ -64,7 +64,7 @@ print ("fbeta: ", fbeta)
 
 # Compute the model performance on slices
 logging.info('computing the model performance on slices...')
-performance = compute_metrics_by_slice(model, test, cat_columns=cat_features, target="salary", encoder=encoder, lb=lb)
+performance = compute_metrics_by_slice(model, test, cat_columns=cat_features, target="salary", training=False, encoder=encoder, lb=lb)
 logging.info('Saving the model performance on slices as txt...')
 saved_performance = performance.to_numpy()
 np.savetxt('../model/slice_output.txt', saved_performance, fmt='%s')

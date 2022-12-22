@@ -66,6 +66,7 @@ def compute_metrics_by_slice(model,
                              df,
                              cat_columns,
                              target,
+                             training=False,
                              encoder,
                              lb):
     """
