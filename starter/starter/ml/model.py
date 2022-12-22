@@ -72,12 +72,13 @@ def compute_metrics_by_slice(model,
     """
     This function outputs the performance of the model on slices of the data
     args:
-        - df : Input dataframe
         - model : Trained model binary file
-        - encoder : fitted One Hot Encoder
-        - lb : label binarizer
+        - df : Input dataframe
         - cat_columns : list of categorical columns
         - target : Class label  string
+        - training : Boolean to flag training
+        - encoder : fitted One Hot Encoder
+        - lb : label binarizer
     returns:
         - metrics : Output dataframe containing metric
     """
