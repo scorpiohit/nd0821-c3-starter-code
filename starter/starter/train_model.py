@@ -38,7 +38,7 @@ X_train, y_train, encoder, lb = process_data(
 
 # Proces the test data with the process_data function.
 X_test, y_test, encoder, lb = process_data(
-    test, categorical_features=cat_features, label="salary", encoder=encoder, lb=lb, training=True
+    test, categorical_features=cat_features, label="salary", encoder=encoder, lb=lb, training=False
    )
 
 with open('../model/encoder.pkl', 'wb') as f:
