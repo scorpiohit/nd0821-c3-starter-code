@@ -62,11 +62,11 @@ def inference(model, X):
     """
     return model.predict(X)
 
+
 def compute_metrics_by_slice(model,
                              df,
                              cat_columns,
                              target,
-                             training=False,
                              encoder,
                              lb):
     """
