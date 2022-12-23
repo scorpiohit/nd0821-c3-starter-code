@@ -17,9 +17,9 @@ This was later cleaned to remove trailing spaces. Only 80% was used for training
 
 ## Metrics
 Model evaluation is done using below metrics score:
-1. precision (0.73)
-2. recall (0.26)
-3. fbeta (0.39)
+precision:  0.7171945701357466
+recall:  0.6163318211276734
+fbeta:  0.6629487626350645
 
 ## Ethical Considerations
 Features like race and gender can create ethical bias. A slight discrimination can be noticed for female gender using recall metric.  
