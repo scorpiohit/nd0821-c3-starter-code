@@ -35,6 +35,8 @@ class dataInput(BaseModel):
     relationship: str = Field(..., example="Own-child")
     race: str = Field(..., example="Black")
     sex: str = Field(..., example="Male")
+    capital_gain: int = Field(..., alias="capital-gain", example=0)
+    capital_loss: int = Field(..., alias="capital-loss", example=0)
     hours_per_week: int = Field(..., alias="hours-per-week", example=40)
     native_country: str = Field(
         ..., alias="native-country", example="United-States"
