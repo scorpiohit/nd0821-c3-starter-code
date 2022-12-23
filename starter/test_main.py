@@ -46,7 +46,7 @@ def test_min_50k():
         "race": " White",
         "sex": "Male",
         "capital-gain": 0,
-        "capital_loss": 0,
+        "capital-loss": 0,
         "hours-per-week": 55,
         "native-country": " United-States"}
     r = client.post("/inference/", json=data)
