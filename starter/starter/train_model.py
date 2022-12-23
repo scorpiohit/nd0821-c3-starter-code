@@ -30,16 +30,18 @@ cat_features = [
     "relationship",
     "race",
     "sex",
-    "native-country",
-]
-X_train, y_train, encoder, lb = process_data(
-    train, categorical_features=cat_features, label="salary", training=True
-)
+    "native-country"]
 
-# Proces the test data with the process_data function.
+X_raw, y_raw, encoder, lb = process_data(
+    data, categorical_features=cat_features, label="salary", training=True)
+
+#Process the train data with the process_data function
+X_train, y_train, encoder, lb = process_data(
+    train, categorical_features=cat_features, label="salary", training=False, encoder=encoder, lb=lb)
+
+# Process the test data with the process_data function.
 X_test, y_test, encoder, lb = process_data(
-    test, categorical_features=cat_features, label="salary", encoder=encoder, lb=lb, training=False
-   )
+    test, categorical_features=cat_features, label="salary", training=False, encoder=encoder, lb=lb)
 
 with open('../model/encoder.pkl', 'wb') as f:
     pickle.dump(encoder, f)

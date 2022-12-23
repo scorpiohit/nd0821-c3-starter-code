@@ -24,9 +24,10 @@ def test_max_50k():
         "relationship": "Husband",
         "race": " White",
         "sex": "Male",
+        "capital-gain": 0,
+        "capital-loss": 0,
         "hours-per-week": 50,
-        "native-country": "Yugoslavia",
-    }
+        "native-country": "Yugoslavia"}
     r = client.post("/inference/", json=data)
     assert r.status_code == 200
     assert r.json() == {"salary": "<=50k"}
@@ -44,9 +45,10 @@ def test_min_50k():
         "relationship": "Husband",
         "race": " White",
         "sex": "Male",
+        "capital-gain": 0,
+        "capital_loss": 0,
         "hours-per-week": 55,
-        "native-country": " United-States",
-    }
+        "native-country": " United-States"}
     r = client.post("/inference/", json=data)
     assert r.status_code == 200
     assert r.json() == {"salary": ">50k"}
