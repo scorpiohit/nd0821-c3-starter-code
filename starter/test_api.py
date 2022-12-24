@@ -16,6 +16,6 @@ data = {"age": 45,
         "hours-per-week": 55,
         "native-country": " United-States"}
 
-response = requests.post("http://127.0.0.1:8000/inference/", data=json.dumps(data))
+response = requests.post("https://udacity-nd0821-c3-mohit.herokuapp.com/inference/", data=json.dumps(data))
 print(response.status_code)
 print(response.json())
