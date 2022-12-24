@@ -1,4 +1,7 @@
 import json
+import sys
+
+sys.path.insert(0, "starter")
 
 from fastapi.testclient import TestClient
 from main import app
